@@ -4,7 +4,7 @@
 <img width="1920" height="1017" alt="image" src="https://github.com/user-attachments/assets/243e4a4c-164d-46d3-9197-390f7e85d58e" />
 <img width="1920" height="1017" alt="image" src="https://github.com/user-attachments/assets/708ae6bd-6e88-42c5-a9de-1e8a08194bd4" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c546726b-ca80-4a46-b85f-fe896cd52011" href="https://modrinth.com/mod/3d-multiplayer-decoration"  target="_blank" />
+<img width="250" height="141" alt="image" src="https://github.com/user-attachments/assets/c546726b-ca80-4a46-b85f-fe896cd52011" href="https://modrinth.com/mod/3d-multiplayer-decoration"  target="_blank" />
 
 
 
