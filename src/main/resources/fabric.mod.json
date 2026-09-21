@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "threed-multiplayer-decoration",
+	"version": "${version}",
+	"name": "3D Multiplayer Decoration",
+	"description": "This mod allows you to place 3D display entities to place multiplayer compatible cosmetic decorations, with custom items accessible through /3dgive, compatible with vanilla clients",
+	"authors": [
+		"ThirtyFangs"
+	],
+	"contact": {
+		"homepage": "https://ko-fi.com/thirtyfangs"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/threed-multiplayer-decoration/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.thirtyfangs.decoration.ThreeDMultiplayerDecoration"
+		],
+		"client": [
+			"com.thirtyfangs.decoration.client.ThreeDMultiplayerDecorationClient"
+		]
+	},
+	"mixins": [
+		"threed-multiplayer-decoration.mixins.json",
+		{
+			"config": "threed-multiplayer-decoration.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

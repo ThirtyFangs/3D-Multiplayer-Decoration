@@ -1,0 +1,1 @@
+give @s command_block[block_entity_data={id:"command_block",auto:1b,Command:"function 3d_multiplayer_decoration:hylian_shield_place"},item_name={"color":"#FF7729","text":"Hylian Shield"},item_model="3d_multiplayer_decoration:hylian_shield"] 1
