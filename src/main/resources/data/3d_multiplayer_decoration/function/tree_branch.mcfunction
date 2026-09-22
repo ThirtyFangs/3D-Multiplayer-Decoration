@@ -1,0 +1,1 @@
+give @s command_block[block_entity_data={id:"command_block",auto:1b,Command:"function 3d_multiplayer_decoration:tree_branch_place"},item_name={"color":"#FF7729","text":"Tree Branch"},item_model="minecraft:oak_wood"] 1

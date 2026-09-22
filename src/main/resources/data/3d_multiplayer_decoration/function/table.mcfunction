@@ -1,0 +1,1 @@
+give @s command_block[block_entity_data={id:"command_block",auto:1b,Command:"function 3d_multiplayer_decoration:table_place"},item_name={"color":"#FF7729","text":"Table"},item_model="3d_multiplayer_decoration:table"] 1

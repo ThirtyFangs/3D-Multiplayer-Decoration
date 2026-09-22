@@ -26,6 +26,18 @@ public class ThreeDMultiplayerDecorationClient implements ClientModInitializer {
 	private static final String[] HYLIANSHIELD_COMMAND = {
 		"function 3d_multiplayer_decoration:hylian_shield"
 	};
+	private static final String[] JAPANESELIGHT_COMMAND = {
+		"function 3d_multiplayer_decoration:japanese_light"
+	};
+	private static final String[] MAJORASMASK_COMMAND = {
+		"function 3d_multiplayer_decoration:majorasmask"
+	};
+	private static final String[] TREEBRANCH_COMMAND = {
+		"function 3d_multiplayer_decoration:tree_branch"
+	};
+	private static final String[] TABLE_COMMAND = {
+		"function 3d_multiplayer_decoration:table"
+	};
 	private static final Queue<String> DISPLAY_QUEUE = new ArrayDeque<>();
 	private static int displayTick;
 	@Override
@@ -89,6 +101,50 @@ public class ThreeDMultiplayerDecorationClient implements ClientModInitializer {
 					}
 					displayTick = 0;
 					context.getSource().sendFeedback(Component.literal("Gave you one Hylian Shield"));
+
+					return 1;
+				}))
+			.then(literal("japanese_light")
+				.executes(context -> {
+					DISPLAY_QUEUE.clear();
+					for (String command : JAPANESELIGHT_COMMAND) {
+						DISPLAY_QUEUE.add(command);
+					}
+					displayTick = 0;
+					context.getSource().sendFeedback(Component.literal("Gave you one japanese light"));
+
+					return 1;
+				}))
+			.then(literal("majoras_mask")
+				.executes(context -> {
+					DISPLAY_QUEUE.clear();
+					for (String command : MAJORASMASK_COMMAND) {
+						DISPLAY_QUEUE.add(command);
+					}
+					displayTick = 0;
+					context.getSource().sendFeedback(Component.literal("Gave you Majora's Mask"));
+
+					return 1;
+				}))
+			.then(literal("tree_branch")
+				.executes(context -> {
+					DISPLAY_QUEUE.clear();
+					for (String command : TREEBRANCH_COMMAND) {
+						DISPLAY_QUEUE.add(command);
+					}
+					displayTick = 0;
+					context.getSource().sendFeedback(Component.literal("Gave you a tree branch"));
+
+					return 1;
+				}))	
+			.then(literal("table")
+				.executes(context -> {
+					DISPLAY_QUEUE.clear();
+					for (String command : TABLE_COMMAND) {
+						DISPLAY_QUEUE.add(command);
+					}
+					displayTick = 0;
+					context.getSource().sendFeedback(Component.literal("Gave you a table"));
 
 					return 1;
 				}))));

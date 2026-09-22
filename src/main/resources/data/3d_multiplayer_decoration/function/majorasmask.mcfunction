@@ -1,0 +1,1 @@
+give @s command_block[block_entity_data={id:"command_block",auto:1b,Command:"function 3d_multiplayer_decoration:majorasmask_place"},item_name={"color":"#3000B7","text":"Majora's Mask"},item_model="3d_multiplayer_decoration:majorasmask"] 1
