@@ -38,6 +38,14 @@ public class ThreeDMultiplayerDecorationClient implements ClientModInitializer {
 	private static final String[] TABLE_COMMAND = {
 		"function 3d_multiplayer_decoration:table"
 	};
+	private static final String[] MULTITABLE_COMMAND = {
+		"clientgive bat_spawn_egg[entity_data={id:\"minecraft:block_display\",block_state:{id:\"minecraft:oak_slab\",Properties:{type:\"bottom\"}},transformation:[-0.125f,0f,0f,0.125f,0f,-1.4645f,0f,0.72375f,0f,0f,0.125f,0.875f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Table\"},item_model=\"3d_multiplayer_decoration:table\"] 1",
+		"clientgive bat_spawn_egg[entity_data={id:\"minecraft:block_display\",block_state:{id:\"minecraft:oak_slab\",Properties:{type:\"bottom\"}},transformation:[-0.125f,0f,0f,1f,0f,-1.4645f,0f,0.72375f,0f,0f,0.125f,0.875f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Table\"},item_model=\"3d_multiplayer_decoration:table\"] 1",
+		"clientgive bat_spawn_egg[entity_data={id:\"minecraft:block_display\",block_state:{id:\"minecraft:oak_slab\",Properties:{type:\"bottom\"}},transformation:[-0.125f,0f,0f,0.125f,0f,-1.4645f,0f,0.72375f,0f,0f,0.125f,0f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Table\"},item_model=\"3d_multiplayer_decoration:table\"] 1",
+		"clientgive bat_spawn_egg[entity_data={id:\"minecraft:block_display\",block_state:{id:\"minecraft:oak_slab\",Properties:{type:\"bottom\"}},transformation:[-0.125f,0f,0f,1f,0f,-1.4645f,0f,0.72375f,0f,0f,0.125f,0f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Table\"},item_model=\"3d_multiplayer_decoration:table\"] 1",
+		"clientgive bat_spawn_egg[entity_data={id:\"minecraft:block_display\",block_state:{id:\"minecraft:oak_slab\",Properties:{type:\"bottom\"}},transformation:[-1f,0f,0f,1f,0f,-0.4815f,0f,0.963125f,0f,0f,1f,0f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Table\"},item_model=\"3d_multiplayer_decoration:table\"] 1",
+		"clientgive bat_spawn_egg[entity_data={id:\"minecraft:block_display\",block_state:{id:\"minecraft:orange_wool\",Properties:{}},transformation:[-0.6787518456f,0f,0.1292034965f,0.775f,0f,-0.046f,0f,1f,0.1093260355f,0f,0.8021612721f,0.044375f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Table\"},item_model=\"3d_multiplayer_decoration:table\"] 1"
+	};
 	private static final Queue<String> DISPLAY_QUEUE = new ArrayDeque<>();
 	private static int displayTick;
 	@Override
@@ -145,6 +153,18 @@ public class ThreeDMultiplayerDecorationClient implements ClientModInitializer {
 					}
 					displayTick = 0;
 					context.getSource().sendFeedback(Component.literal("Gave you a table"));
+
+					return 1;
+				}))));
+		ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> dispatcher.register(literal("3dgive_multiplayer")
+			.then(literal("table")
+				.executes(context -> {
+					DISPLAY_QUEUE.clear();
+					for (String command : MULTITABLE_COMMAND) {
+						DISPLAY_QUEUE.add(command);
+					}
+					displayTick = 0;
+					context.getSource().sendFeedback(Component.literal("Gave you a table. Make sure to not move and to place each spawn egg with the same rotation. Make also sure to click on the item in your inventory before right clicking it."));
 
 					return 1;
 				}))));
