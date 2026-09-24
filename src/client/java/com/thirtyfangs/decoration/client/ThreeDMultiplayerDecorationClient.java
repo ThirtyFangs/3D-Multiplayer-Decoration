@@ -47,6 +47,16 @@ public class ThreeDMultiplayerDecorationClient implements ClientModInitializer {
 		"clientgive bat_spawn_egg[entity_data={id:\"minecraft:block_display\",Rotation:[0F,0F],block_state:{id:\"minecraft:oak_slab\",Name:\"minecraft:oak_slab\",Properties:{type:\"bottom\"}},transformation:[-0.125f,0f,0f,0.125f,0f,-1.4645f,0f,0.72375f,0f,0f,0.125f,0.875f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Table\"},lore=[[{\"color\":\"#3838FF\",\"text\":\"Created with \"},{\"color\":\"#3838FF\",\"text\":\"3D Multiplayer Decoration\"}],{\"color\":\"#3D57FF\",\"text\":\"htttps://modrinth.com/mod/3d-multiplayer-decoration\"}],item_model=\"3d_multiplayer_decoration:table\"] 1"
 	
 	};
+	private static final String[] MULTISIGN_COMMAND = {
+		"clientgive minecraft:bat_spawn_egg[entity_data={id:\"minecraft:item_display\",Rotation:[0F,0F],item:{id:\"minecraft:goat_horn\",count:1},item_display:\"none\",transformation:[0f,0f,-2.3125f,0.52125f,0.7244443697f,-0.404404758f,0f,1f,-0.1941142838f,-1.5092591036f,0f,0.4360616937f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Sign\"},lore=[[{\"color\":\"#3838FF\",\"text\":\"Created with \"},{\"color\":\"#3838FF\",\"text\":\"3D Multiplayer Decoration\"}],{\"color\":\"#3D57FF\",\"text\":\"htttps://modrinth.com/mod/3d-multiplayer-decoration\"}],item_model=\"3d_multiplayer_decoration:sign\"] 1",
+		"clientgive minecraft:bat_spawn_egg[entity_data={id:\"minecraft:block_display\",Rotation:[0F,0F],block_state:{id:\"minecraft:stripped_spruce_wood\",Name:\"minecraft:stripped_spruce_wood\",Properties:{axis:\"x\"}},transformation:[0f,0f,-0.125f,0.495f,0f,1.5f,0f,0f,0.125f,0f,0f,0.4360616937f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Sign\"},lore=[[{\"color\":\"#3838FF\",\"text\":\"Created with \"},{\"color\":\"#3838FF\",\"text\":\"3D Multiplayer Decoration\"}],{\"color\":\"#3D57FF\",\"text\":\"htttps://modrinth.com/mod/3d-multiplayer-decoration\"}],item_model=\"3d_multiplayer_decoration:sign\"] 1",
+		"clientgive minecraft:bat_spawn_egg[entity_data={id:\"minecraft:block_display\",Rotation:[0F,0F],block_state:{id:\"minecraft:stripped_spruce_wood\",Name:\"minecraft:stripped_spruce_wood\",Properties:{axis:\"x\"}},transformation:[0f,0f,-0.125f,0.618125f,0.125f,0f,0f,1.856875f,0f,-0.8125f,0f,0.5610616937f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Sign\"},lore=[[{\"color\":\"#3838FF\",\"text\":\"Created with \"},{\"color\":\"#3838FF\",\"text\":\"3D Multiplayer Decoration\"}],{\"color\":\"#3D57FF\",\"text\":\"htttps://modrinth.com/mod/3d-multiplayer-decoration\"}],item_model=\"3d_multiplayer_decoration:sign\"] 1",
+		"clientgive minecraft:bat_spawn_egg[entity_data={id:\"minecraft:block_display\",Rotation:[0F,0F],block_state:{id:\"minecraft:red_wool\",Name:\"minecraft:red_wool\",Properties:{}},transformation:[0f,0f,0.0625f,0.618125f,0f,-0.6875f,0f,1.981875f,0.25f,0f,0f,-0.2426883063f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Sign\"},lore=[[{\"color\":\"#3838FF\",\"text\":\"Created with \"},{\"color\":\"#3838FF\",\"text\":\"3D Multiplayer Decoration\"}],{\"color\":\"#3D57FF\",\"text\":\"htttps://modrinth.com/mod/3d-multiplayer-decoration\"}],item_model=\"3d_multiplayer_decoration:sign\"] 1",
+		"clientgive minecraft:bat_spawn_egg[entity_data={id:\"minecraft:block_display\",Rotation:[0F,0F],block_state:{id:\"minecraft:red_wool\",Name:\"minecraft:red_wool\",Properties:{}},transformation:[0f,0f,0.0625f,0.618125f,0f,-0.9375f,0f,1.981875f,0.25f,0f,0f,0.0066866937f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Sign\"},lore=[[{\"color\":\"#3838FF\",\"text\":\"Created with \"},{\"color\":\"#3838FF\",\"text\":\"3D Multiplayer Decoration\"}],{\"color\":\"#3D57FF\",\"text\":\"htttps://modrinth.com/mod/3d-multiplayer-decoration\"}],item_model=\"3d_multiplayer_decoration:sign\"] 1",
+		"clientgive minecraft:bat_spawn_egg[entity_data={id:\"minecraft:block_display\",Rotation:[0F,0F],block_state:{id:\"minecraft:stripped_spruce_wood\",Name:\"minecraft:stripped_spruce_wood\",Properties:{axis:\"x\"}},transformation:[0f,0.1132333322f,-0.1207407283f,0.495f,0f,0.422592549f,0.0323523806f,1.45f,0.125f,0f,0f,0.4360616937f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Sign\"},lore=[[{\"color\":\"#3838FF\",\"text\":\"Created with \"},{\"color\":\"#3838FF\",\"text\":\"3D Multiplayer Decoration\"}],{\"color\":\"#3D57FF\",\"text\":\"htttps://modrinth.com/mod/3d-multiplayer-decoration\"}],item_model=\"3d_multiplayer_decoration:sign\"] 1",
+		"clientgive minecraft:bat_spawn_egg[entity_data={id:\"minecraft:item_display\",Rotation:[0F,0F],item:{id:\"minecraft:skeleton_skull\",count:1},item_display:\"none\",transformation:[0f,0f,-0.5f,0.5575f,-0.1346280057f,0.4815343187f,0f,2.19f,0.4815343187f,0.1346280057f,0f,0.5198116937f,0f,0f,0f,1f]},item_name={\"color\":\"#FFA64D\",\"text\":\"Sign\"},lore=[[{\"color\":\"#3838FF\",\"text\":\"Created with \"},{\"color\":\"#3838FF\",\"text\":\"3D Multiplayer Decoration\"}],{\"color\":\"#3D57FF\",\"text\":\"htttps://modrinth.com/mod/3d-multiplayer-decoration\"}],item_model=\"3d_multiplayer_decoration:sign\"] 1",
+		"clientgive minecraft:oak_sign 1"
+	};
 	private static final Queue<String> DISPLAY_QUEUE = new ArrayDeque<>();
 	private static int displayTick;
 	@Override
@@ -166,6 +176,17 @@ public class ThreeDMultiplayerDecorationClient implements ClientModInitializer {
 					}
 					displayTick = 0;
 					context.getSource().sendFeedback(Component.literal("Gave you a table. If nothing is happening, click on the item to confirm its existence. Clientgive mod required"));
+
+					return 1;
+				}))
+			.then(literal("sign")
+				.executes(context -> {
+					DISPLAY_QUEUE.clear();
+					for (String command : MULTISIGN_COMMAND) {
+						DISPLAY_QUEUE.add(command);
+					}
+					displayTick = 0;
+					context.getSource().sendFeedback(Component.literal("Gave you a sign. If nothing is happening, click on the item to confirm its existence. Clientgive mod required"));
 
 					return 1;
 				}))));
