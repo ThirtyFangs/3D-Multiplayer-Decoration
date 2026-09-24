@@ -12,4 +12,5 @@ This mod allows you to place 3D decorative blocks in singleplayer & multiplayer 
 Command to use: 
 
 Singleplayer: /3dgive <argument> to place a 3D model, and destroy it by clicking on it! This command adds an hitbox to the decoration
+
 Multiplayer: /3dgive_multiplayer <argument>
