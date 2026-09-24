@@ -6,7 +6,10 @@
 
 
 
-This mod allows you to place 3D decorative blocks in singleplayer that can be visible by everyone without the mod (using display entities)!
+This mod allows you to place 3D decorative blocks in singleplayer & multiplayer that can be visible by everyone without the mod using display entities!
 
 # Get started
-Command to use: /3dgive <argument> to place a 3D model, and destroy it by clicking on it!
+Command to use: 
+
+Singleplayer: /3dgive <argument> to place a 3D model, and destroy it by clicking on it! This command adds an hitbox to the decoration
+Multiplayer: /3dgive_multiplayer <argument>
