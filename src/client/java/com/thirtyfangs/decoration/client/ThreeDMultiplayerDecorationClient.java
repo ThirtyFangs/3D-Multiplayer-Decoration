@@ -175,7 +175,7 @@ public class ThreeDMultiplayerDecorationClient implements ClientModInitializer {
 						DISPLAY_QUEUE.add(command);
 					}
 					displayTick = 0;
-					context.getSource().sendFeedback(Component.literal("Gave you a table. If nothing is happening, click on the item to confirm its existence. Clientgive mod required"));
+					context.getSource().sendFeedback(Component.literal("Gave you a table. Make sure to spawn each given item on the same block. If nothing is happening, click on the item to confirm its existence. Clientgive mod required"));
 
 					return 1;
 				}))
@@ -186,7 +186,7 @@ public class ThreeDMultiplayerDecorationClient implements ClientModInitializer {
 						DISPLAY_QUEUE.add(command);
 					}
 					displayTick = 0;
-					context.getSource().sendFeedback(Component.literal("Gave you a sign. If nothing is happening, click on the item to confirm its existence. Clientgive mod required"));
+					context.getSource().sendFeedback(Component.literal("Gave you a sign. Make sure to spawn each given item on the same block. If nothing is happening, click on the item to confirm its existence. Clientgive mod required"));
 
 					return 1;
 				}))));
